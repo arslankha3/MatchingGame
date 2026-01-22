@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Development Credit -->
+    <meta name="author" content="Arsalan Ahmed Khatri">
+    <meta name="description" content="Matching Game - Developed by Arsalan Ahmed Khatri">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Matching Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-background-primary min-h-screen select-none relative">
+
+    <!-- GAME CONTAINER -->
+    <div
+        class="container shadow-lg bg-background-dark w-full h-full md:h-auto flex flex-col-reverse md:flex-row gap-4 max-w-5xl rounded-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4">
+
+        <div
+            class="game-won hidden flex top-40 md:top-4 left-4 absolute w-[calc(100%-2rem)] md:h-[calc(100%-2rem)] md:w-auto items-center justify-center flex-col gap-8 aspect-square z-10 rounded-2xl bg-linear-to-r from-red-500 via-orange-500 to-yellow-500">
+            <h1 class="text-5xl md:text-7xl font-extrabold">&#x1F389</h1>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white">You Won</h1>
+        </div>
+
+        <div id="board"
+            class="board mb-auto w-full self-center grid grid-cols-4 gap-4 perspective-distant text-white md:p-4">
+        </div>
+
+        <div class="details w-full md:max-w-1/3 min-h-24 text-white">
+
+            <div
+                class="game-detail mt-8 md:m-4 bg-background-primary p-4 text-xl font-bold flex flex-col rounded-xl shadow-md">
+                <p>Moves: <span class="moves">0</span></p>
+                <p>Time: <span class="time left-auto">00:00</span></p>
+            </div>
+
+            <div
+                class="control-button fixed md:static w-full bg-background-primary md:bg-transparent bottom-0 left-0 p-4 flex flex-row md:flex-col gap-4">
+                <button class="btn-secondary w-full" id="pause-game">Pause</button>
+                <button class="btn-primary w-full" id="new-game">Start New Game</button>
+            </div>
+
+            <div class="project-info">
+                <h2>Memory Matching Game</h2>
+                <p class="desc">
+                    A classic memory matching game built with vanilla JavaScript and styled using Tailwind CSS.
+                </p>
+                <p class="author">By Arsalan Ahmed Khatri</p>
+                <p class="desc">This is a simple web-based memory game where players flip over cards to find matching
+                    pairs. The goal is to
+                    match all pairs in the shortest amount of time or fewest moves.</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
